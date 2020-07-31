@@ -1,0 +1,196 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<!--*************************************************************************
+    Site Header.
+    ************************************************************************* -->
+    <header>
+
+      <!-- Responsive Site Settings -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+      <!-- AJHdotcom Site Title --> 
+      <title>AJHdotcom Blog</title>
+  
+      <!-- Bootstrap4 Styles  -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+      <!-- Bootstrap4-->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+  </header>
+
+<!--*************************************************************************
+    Site Navigation Section.
+    ************************************************************************* -->
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="{% url 'site-home' %}">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mr-auto">
+
+            <!-- Links -->
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'site-about' %}">About</a>
+            </li>
+        
+            <!-- Preacher Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Preacher</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'site-preacherBio'%}">Bio</a>
+                <a class="dropdown-item" href="{% url 'site-preacherBooks'%}">Books</a>
+              </div>
+            </li>
+
+            <!-- Professional Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Professional</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'site-professionalProfile'%}">Profile</a>
+              </div>
+            </li>
+
+            <!-- Pitmaster Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Pitmaster</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'site-pitmasterBio'%}">Background</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'blog-home' %}">Blog</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav">
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+              </li>
+            {% endif %}
+          </ul>
+      </div>
+
+    </nav>
+
+    <div class="d-flex flex-wrap pt-2 container">
+      <div class="mr-auto">
+        <a href="{% url 'site-home'%}"><img src="{% static 'ajhsite/images/ajhdotcom_logo_nobkg.png'%}" width="350" height="60" alt="Anthony J. Hunter"></a>
+      </div>
+      <div class="ml-auto"></div>
+        <span><script type="text/javascript" src="https://www.sitelevel.com/javabox?crid=4gy8nktj"></script></span>
+      </div>
+    </div>
+    <br/>
+
+<!--*************************************************************************
+    Main Content Section.
+    ************************************************************************* -->
+		<main role="main" class="container mt-4">
+      <div class="row">
+
+        <div class="col-md-8">
+
+          {% if messages %}
+            {% for message in messages %}
+
+              {% if message.level == 25 %}
+                <div class="alert alert-success" role="alert">
+              {% endif %}
+              
+              {% if message.level == 40 %}
+                <div class="alert alert-danger" role="alert">
+              {% endif %}
+
+                {{ message }}
+
+              </div>
+
+            {% endfor %}
+          {% endif %}
+
+          {% block content %}{% endblock content %}
+        </div>
+        <div class="col-md-4">
+          <div class="content-section">
+            
+          </div>
+        </div>
+
+      </div>
+    </main>
+    
+<!--*************************************************************************
+    Page Footer Section.
+    ************************************************************************* -->
+
+    <div id="siteFooter" class="container border-top pt-4">
+      <div class="row">
+
+        <div id="socialSection" class="col-sm text-center">
+          <div class="text-dark">
+            <h5>Socialize with me...</h5>
+          </div>
+          <div>
+            <a class="text-muted" target="_blank" href="https://twitter.com/tonyhunterajh">Twitter</a><br />
+            <a class="text-muted" target="_blank" href="https://www.linkedin.com/in/thunterajh/">LinkedIN</a><br />
+            <a class="text-muted" target="_blank" href="https://www.facebook.com/anthony.hunter.3363">FaceBook</a>
+          </div>
+        </div>
+
+        <div id="emailSection" class="col-sm text-center">
+          <div class="text-dark">
+            <h5>Email me...</h5>
+          </div>
+          <div class="text-muted" >
+            <a class="text-muted" target="_blank" href="mailto:anthony@anthonyjhunter.com">Anthony J. Hunter</a><br />
+            <a class="text-muted" target="_blank" href="mailto:ishbbq@gmail.com">Indy Smokehouse BBQ</a><br />
+            <a class="text-muted" target="_blank" href="mailto:ajhunterministries@gmail.com">A.J. Hunter Ministries</a>
+          </div>
+        </div>
+
+        <div id="postSection" class="col-sm text-center">
+          <div  class="text-dark">
+            <h5>Read me...</h5>
+          </div>
+          <div>
+            <a class="text-muted" target="_blank" href="http://www.anthonyjhunter.com/blog/">Blog</a> 
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <br>
+
+<!--*************************************************************************
+    Page Copyright (c) Section.
+    ************************************************************************* -->
+    <div id="siteCopyright" class="border-top pt-2">
+      <p align="left"><font color="gray">Copyright &copy; 2020-2021 A. J. Hunter Enterprises, LLC - All Rights Reserved.</font></p>
+    </div>
+
+</html>

@@ -1,0 +1,68 @@
+{% extends 'ajhsite/base.html' %}
+{% load static %}
+{% block content%}
+  
+  <div class="container border-bottom">
+    <h2>Ministry Bio</h2>
+  </div>
+  
+  <div class="container mt-4">
+    
+    <p class="content">
+    <img src="{% static 'ajhsite/images/the_hunters.jpg'%}" class="image-wrapper float-left pr-3 pb-3 w-50 rounded" alt="Anthony and Demetria" />
+    Rev. Anthony J. Hunter is an evangelist, teacher and author devoted to the ministry of preaching the gospel 
+    of Jesus Christ, teaching the word of God, and reaching the world for Christ. He is also a former youth 
+    pastor, as well as a former senior pastor who is extremely proud of the amazing work he was assigned by God. 
+    Rev. Hunter is a full-time Information Technology Consultant. He is married to Demetria D. Hunter his wife,
+    life partner and best friend. Rev. Hunter and his wife have five children and 12 grandchildren.
+    </p>
+    <p>
+    I have been in church my entire life.  I was raised to worship and praise God, to serve Him with all that I
+    am and to love Jesus above all else.  In spite of the amazing upbringing I received, as a young man I went
+    astray and lived a life completely unacceptable in God's eyes.  I drank, used drugs and lived almost every
+    aspect of my life outside the will of God.
+    </p>
+    <p>
+    In 1985, my life took a much needed turn for the better but, only after a terrible turn for the worse! after
+    a night of riotous living, I found myself walking the streets of Indianapolis in a stupor. While I was
+    walking, I heard a voice that asked: "what are you doing to my temple?". I heard this 3 times, and on the
+    third time the high I had was instantly gone!  I ran home, pulled out my personal bible, the big family
+    bible and another bible.  I lay on the floor searching the Word of God for anything that would speak to me
+    about my life.  That's when I found...
+    </p>
+
+    <h3>Isaiah 9:6</h3>
+    <blockquote class="blockquote">
+      <p class="mb-0">
+        <i>
+          For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: 
+          and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince 
+          of Peace.
+        </i>
+      </p>
+    </blockquote>
+    
+    <p>
+      In 1986, I truly found Jesus and received Him as my Lord and Saviour.  Nothing brings me more joy in life than
+      knowing Jesus and having an authentic relationship with my Father through Him.
+    </p>
+    
+    <h2>Ministry Credentials</h2>
+    <p>Official Documents Authorizing My Work in Ministry:</p>
+
+    <div class="row mb-4">
+      <div class="col">
+          <div class="card card-body">
+            <a target="_blank" href="{% static 'ajhsite/images/ajhm_license.JPG'%}"><img src="{% static 'ajhsite/images/ajhm_license.JPG'%}" class="img-fluid pb-3" alt="Ministers License" style="float:left" width="350" height="250" /></a>
+          </div>
+      </div>
+      <div class="col">
+          <div class="card card-body">
+            <a target="_blank" href="{% static 'ajhsite/images/ajhm_ordination.JPG'%}"><img src="{% static 'ajhsite/images/ajhm_ordination.JPG'%}" class="img-fluid pb-3" alt="Ordination Certificate" style="float:left" width="350" height="250" /></a>
+          </div>
+      </div>
+    </div>
+
+  </div>
+    
+{% endblock content%}

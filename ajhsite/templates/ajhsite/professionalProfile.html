@@ -1,0 +1,111 @@
+{% extends 'ajhsite/base.html' %}
+{% load static %}
+{% block content%}
+
+    <div class="container border-bottom">
+      <h2>Professional Profile</h2>
+    </div>
+    
+    <div class="container mt-4">
+
+        <p>Tony has over 30 years of Information Technology experience in multiple disciplines, including system operations, networking, 
+            software engineering, web development, CRM, ETL and RPA (Robotic Process Automation).
+        </p>
+
+        <h4 class="border-bottom mt-2">Industry Experience</h4>
+        <div id="industryExperience" class="content">
+            <p>
+                <ul>
+                    <li>Not-For-Profit</li>
+                    <li>Supply Chain</li>
+                    <li>K-12 Education</li>
+                    <li>Insurance</li>
+                    <li>Healthcare</li>
+                    <li>Agriculture</li>
+                </ul>
+            </p>
+        </div>
+
+        <h4 class="border-bottom mt-2">Hardware Platforms</h4>
+        <div id="hardwarePlatforms" class="content">
+            <p>
+                <ul>
+                    <li>AS/400, iSeries</li>
+                    <li>PC (Windows/Linux)</li>
+                    <li>Mac</li>
+                    <li>Mobile</li>
+                </ul>
+            </p>
+        </div>
+
+        <h4 class="border-bottom mt-2">Software Applications/Systems</h4>
+        <div id="softwareApplications" class="content">
+            <p>
+                <ul>
+                    <li>UIPath</li>
+                    <li>Salesforce Marketing Cloud</li>
+                    <li>MS Teams</li>
+                    <li>BizTalk Server</li>
+                </ul>
+            </p>
+        </div>
+
+        <h4 class="border-bottom mt-2">Programming Languages</h4>
+        <div id="programmingLanguages" class="content">
+            <p>
+                <ul>
+                    <li>C#</li>
+                    <li>Javascript</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>PHP</li>
+                    <li>RPG IV, RPG/ILE</li>
+                    <li>COBOL</li>
+                </ul>
+            </p>
+        </div>
+
+        <h4 class="border-bottom mt-2">Databases (RDBMS/Cloud)</h4>
+        <div id="databases" class="content">
+            <p>
+                <ul>
+                    <li>Snowflake (Cloud)</li>
+                    <li>SQL Server</li>
+                    <li>MySQL</li>
+                    <li>SQLite</li>
+                    <li>MS Acces</li>
+                </ul>
+            </p>
+        </div>
+
+        <h4 class="border-bottom mt-2">Professional Certifications/Training</h4>
+        <div id="certifications" class="content">
+            <p>
+                <ul>
+                    <li>Certification: MCP February 1995: “Microsoft Windows Networking</li>
+                    <li>Dale Carnegie Training April 1999: “Leadership Training For Managers - Course #M9902</li>
+                    <li>Snowflake Hands On Essentials - Web User Interface 2020</li>
+                    <li>UIPath RPA Starter May 4, 2020</li>
+                    <li>UIPath RPA Developer Foundation May 14, 2020</li>
+                    <li>Certification: Microsoft 365 Fundamentals (MS-900) June 22, 2020</li>
+                </ul>
+                <p class="w3-panel w3-light-blue"> Badges/Diplomas Acquired:</p>
+                <a target="" href="{% static 'ajhsite/images/MS365_MS900.png'%}"><img  src="{% static 'ajhsite/images/MS365_MS900.png'%}" alt="Microsoft Badge" width="100" height="100" /></a>
+                <a target="" href="{% static 'ajhsite/images/Essentials+Board_4x.png'%}"><img  src="{% static 'ajhsite/images/Essentials+Board_4x.png'%}" alt="Snowflake Badge" width="100" height="100" /></a>
+                <a target="" href="{% static 'ajhsite/images/RPAStarterDiploma.png'%}"><img  src="{% static 'ajhsite/images/RPAStarterDiploma.png'%}" alt="RPA Starter" width="150" height="100" /></a>
+                <a target="" href="{% static 'ajhsite/images/RPADevFoundDiploma.png'%}"><img  src="{% static 'ajhsite/images/RPADevFoundDiploma.png'%}" alt="RPA Developer" width="150" height="100" /></a>
+            </p>
+        </div>
+
+        <h4 class="border-bottom mt-2">Publications</h4>
+        <div id="publications" class="content">
+            <p>
+                <ul>
+                    <li>News/400 Magazine Article, February 1999, “A Closer Look: Domino for AS/400 Certification”</li>
+                </ul>              
+            </p>
+        </div>
+
+    </div>
+
+{% endblock content%}
