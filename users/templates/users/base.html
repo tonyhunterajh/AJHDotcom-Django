@@ -31,7 +31,7 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="{% url 'site-home' %}">Home</a>
+      <a class="navbar-brand" href="{% url 'blog-home' %}">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -69,9 +69,9 @@
               </div>
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="{% url 'blog-home' %}">Blog</a>
-            </li>
+            </li> -->
           </ul>
 
           <ul class="navbar-nav">
@@ -99,7 +99,7 @@
 
     <div class="d-flex flex-wrap pt-2 container">
       <div class="mr-auto">
-        <a href="{% url 'site-home'%}"><img src="{% static 'ajhsite/images/ajhdotcom_logo_nobkg.png'%}" width="350" height="60" alt="Anthony J. Hunter"></a>
+        <a href="{% url 'blog-home'%}"><img src="{% static 'ajhsite/images/ajhdotcom_logo_nobkg.png'%}" width="350" height="60" alt="Anthony J. Hunter"></a>
       </div>
       <div class="ml-auto"></div>
         <span><script type="text/javascript" src="https://www.sitelevel.com/javabox?crid=4gy8nktj"></script></span>

@@ -34,7 +34,7 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="{% url 'site-home' %}">Home</a>
+      <a class="navbar-brand" href="{% url 'blog-home' %}">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -72,9 +72,9 @@
               </div>
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="{% url 'blog-home' %}">Blog</a>
-            </li>
+            </li> -->
           </ul>
 
           <ul class="navbar-nav">
@@ -102,7 +102,7 @@
 
     <div class="d-flex flex-wrap pt-2 container">
       <div class="mr-auto">
-        <a href="{% url 'site-home'%}"><img src="{% static 'ajhsite/images/ajhdotcom_logo_nobkg.png'%}" width="350" height="60" alt="Anthony J. Hunter"></a>
+        <a href="{% url 'blog-home'%}"><img src="{% static 'ajhsite/images/ajhdotcom_logo_nobkg.png'%}" width="350" height="60" alt="Anthony J. Hunter"></a>
       </div>
       <div class="ml-auto"></div>
         <span><script type="text/javascript" src="https://www.sitelevel.com/javabox?crid=4gy8nktj"></script></span>
@@ -142,54 +142,32 @@
         </div>
         <div class="col-md-4">
           <div class="content-section">
-            <div id="articleSection" class="content">
+            <div id="ContactSection" class="content">
 
-              <div id="ministryArticles" class="container mb-4">
-                  <div class="content">
-                      <h3 class="border-bottom">Ministry Ariticles</h3>
-                      <p>To feed your soul...</p>
-                  </div>
-    
-                  <div class="content" >
-                      <a target="_blank" href="http://www.anthonyjhunter.com/blog/theres-a-tree-in-that-seed/">There's a Tree in That Seed</a>
-                  </div>
-                  <div class="content">
-                      <a target="_blank" href="http://www.anthonyjhunter.com/blog/god-has-changed-my-image/">God Is Changing My Image</a>
-                  </div>
-                  <div class="content">
-                  <a target="_blank" href="http://www.anthonyjhunter.com/blog/how-to-study-the-bible/">How To Study the Bible</a>
-                  </div>
-              </div>
-    
-              <div id="professionalArticles" class="container mb-4">
-                  <div class="content">
-                      <h3 class="border-bottom">Professional Ariticles</h3>
-                      <p>To feed your mind...</p>
-                  </div>
-    
-                  <div class="content" >
-                      <a target="_blank" href="http://www.anthonyjhunter.com/blog/w3-css-is-awesome/">W3.CSS is Awesome!</a>
-                  </div>
-              </div>
-    
-              <div id="bbqArticles" class="container mb-4">
-                  <div class="content">
-                      <h3 class="border-bottom"> BBQ Ariticles</h3>
-                      <p>To feed your belly!...</p>
-                  </div>
-    
-                  <div class="content" >
-                      <a target="_blank" href="http://www.anthonyjhunter.com/blog/barbe-q/">Barbe-Q!</a>
-                  </div>
-                  <div class="content">
-                      <a target="_blank" href="http://www.anthonyjhunter.com/blog/fixed-up-spareribs/">Fixed Up Spareribs</a>
-                  </div>
-                  <div class="content">
-                      <a target="_blank" href="http://www.anthonyjhunter.com/blog/my-franklin-barbecue-experience/">Franklin BBQ Experience</a>
-                  </div>
-              </div>
+              <div class="container mb-4">
+                <div class="content" align="center">
+                  <img src="{% static 'ajhsite/images/tonyhunter.jpeg'%}" class="image-wrapper float-middle pr-3 pb-3 w-75 rounded-circle">
+                </div>
             </div>
-          </div>
+
+              <div class="container mb-4">
+                  <div class="content" align="center">
+                      <h3 class="border-bottom">Contact/Social Media</h3>
+                  </div>
+              </div>
+
+              <div class="container mb-4">
+                <div class="content" align="center">
+                  <a target="_blank" class="mr-2" href="https://twitter.com/tonyhunterajh" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_logo-twitter.svg'%}"></a>
+                  <a target="_blank" class="mr-2" href="https://www.linkedin.com/in/thunterajh/" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_logo-linkedin.svg'%}"></a>
+                  <a target="_blank" class="mr-2" href="https://www.facebook.com/anthony.hunter.3363" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_round-facebook.svg'%}"></a>
+                  <a target="_blank" class="mr-2" href="https://github.com/tonyhunterajh" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_round-github.svg'%}"></a>
+                  <a target="_blank" class="" href="https://join.slack.com/t/ajhdotcom/shared_invite/zt-gpgho6xs-opUFunGSWVGv3DhV0Zj6QA"><img src="{% static 'ajhsite/images/svg/social-1_logo-slack.svg'%}"></a>
+                </div>
+              </div>
+
+            </div>
+         </div>
         </div>
 
       </div>
@@ -198,8 +176,8 @@
 <!--*************************************************************************
     Page Footer Section.
     ************************************************************************* -->
-    <div id="siteFooter" class="container border-top pt-4">
-      <div class="row">
+    <div id="siteFooter" class="container pt-4">
+      <!-- <div class="row">
 
         <div id="socialSection" class="col-sm text-center">
           <div class="text-dark">
@@ -232,15 +210,14 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
     </div>
-    <br>
 
 <!--*************************************************************************
     Page Copyright (c) Section.
     ************************************************************************* -->
     <div id="siteCopyright" class="border-top pt-2">
-      <p align="left"><font color="gray">Copyright &copy; 2020-2021 A. J. Hunter Enterprises, LLC - All Rights Reserved.</font></p>
+      <p align="center"><font color="gray">Copyright &copy; 2020 Anthony J. Hunter</font></p>
     </div>
 
 </html>
