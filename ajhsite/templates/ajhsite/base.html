@@ -77,8 +77,12 @@
             </li> -->
           </ul>
 
-          <!-- <ul class="navbar-nav">
+          <ul class="navbar-nav">
             {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
+            </li>
+
               <li class="nav-item">
                 <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
               </li>
@@ -91,11 +95,11 @@
                 <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
               </li>
 
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
-              </li>
+              </li> -->
             {% endif %}
-          </ul> -->
+          </ul>
       </div>
 
     </nav>
