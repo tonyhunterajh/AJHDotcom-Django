@@ -13,9 +13,15 @@
                     <small class="text-muted"><a class="article-title" href="{% url 'post-detail' post.id %}"><i>(Continue reading...)</i></a></small>
                 </p>
                 <div class="border-top">
-                    <small><a class="text-muted mr-2" href="{% url 'user-posts' post.author.username %}">Posted by {{ post.author }} </a></small>
-                    <small class="text-muted"> {{ post.date_posted|date:"F d, Y P" }} </small>
-                </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small><a class="text-muted mr-2" href="{% url 'user-posts' post.author.username %}">Posted by {{ post.author }} </a></small>
+                            <small class="text-muted"> {{ post.date_posted|date:"F d, Y P" }} </small>        
+                        </div>
+                        <div class="col-md-2 ml-auto">
+                            <small><a class="text-muted" href="{% url 'post-detail' post.id %}"> Comments: {{ post.approved_comments.count }}</a></small>
+                        </div>
+                 </div>
             </div>
         </article>
 

@@ -3,21 +3,47 @@
 {% block content%}
 
     <article class="media content-section">
-        <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+        <!-- <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}"> -->
         <div class="media-body">
-            <div class="article-metadata">
-                <a class="mr-2" href="{% url 'user-posts' object.author.username %}"> {{ object.author }} </a>
-                <small class="text-muted"> {{ object.date_posted|date:"F d, Y" }} </small>
+            <h3 class="article-title"> {{ post.title }} </h3>
+            <p class="mt-3"> 
+                {{ post.content }} 
+            </p>
+            <div class="border-top">
+                <div class="row">
+                    <div class="col-md-6">
+                        <small><a class="text-muted mr-2" href="{% url 'user-posts' post.author.username %}">Posted by {{ post.author }} </a></small>
+                        <small class="text-muted"> {{ post.date_posted|date:"F d, Y P" }} </small>        
+                    </div>
+                    <div class="col-md-2 ml-auto">
+                        <small><a class="text-muted" href="{% url 'post-detail' post.id %}"> Comments: {{ post.approved_comments.count }}</a></small>
+                    </div>
             </div>
-            <h2 class="article-title"> {{ object.title }} </h2>
-            <p class="article-content"> {{ object.content }} </p>
-            {% if object.author == user %}
-                <div class="content border-top">
-                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
-                    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+        </div>
+    </article>
+
+   <hr>
+
+   <a class="btn btn-outline-secondary mb-2" href="{% url 'add-comment' pk=post.pk %}">Add a Comment</a>
+    {% for comment in post.comments.all %}
+        {% if user.is_authenticated or comment.approved_comment %}
+
+            <div class="content-section">   
+                <small class="text-muted">Comment by <strong>{{ comment.author }}</strong> on </small>
+                <small class="text-muted"> {{ comment.created_date|date:"F d, Y P" }} </small>
+                <p>{{ comment.text|linebreaks }}</p>
+            </div>
+            
+            {% if not comment.approved_comment %}
+                <div class="mb-4">
+                    <a class="btn btn-outline-danger" href="{% url 'comment-remove' pk=comment.pk %}">Remove</a>
+                    <a class="btn btn-outline-secondary" href="{% url 'comment-approve' pk=comment.pk %}">Approve</a>
                 </div>
             {% endif %}
-        </div>
-   </article>
+
+        {% endif %}
+    {% empty %}
+        <p>No comments posted.</p>
+    {% endfor %}
 
 {% endblock content%}
