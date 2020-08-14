@@ -2,6 +2,7 @@
 {% load static %}
 {% block content%}
 
+    <h2 class="mb-3">Posts tagged with "{{ view.tag_name }}" ({{ page_obj.paginator.count }})</h2>
     {% for post in posts %}
 
         <article class="media content-section">
@@ -24,8 +25,8 @@
                             <small><a class="text-muted" href="{{ post.get_absolute_url }}"> Comments: {{ post.approved_comments.count }}</a></small>
                         </div>
                     </div>
-                 </div>
-                 {% if post.tags.count %}
+                </div>
+                {% if post.tags.count %}
                     <div class="border-top">
                         <div class="row">
                             <div class="col-md-6">
@@ -37,7 +38,7 @@
                                         </a>
                                         {% if not forloop.last %}, {% endif %}
                                     {% endfor %}
-
+                                    
                                  </i></small>        
                             </div>
                             <div class="col-md-2 ml-auto">
@@ -46,6 +47,7 @@
                         </div>
                     </div>
                 {% endif %}
+
             </div>
         </article>
 

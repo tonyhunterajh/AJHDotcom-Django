@@ -11,12 +11,7 @@ from django.views.generic import (
 )
 from .models import Post, Comment
 from .forms import CommentForm
-
-def home(request):
-	context = {
-		'posts': Post.objects.all()
-	}
-	return render(request, 'blog/home.html', context)
+from taggit.models import Tag
 
 def add_comment(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -61,13 +56,25 @@ class UserPostListView(ListView):
 		user = get_object_or_404(User, username=self.kwargs.get('username'))
 		return Post.objects.filter(author=user).order_by('-date_posted')
 
+class TagPostListView(ListView):
+	model = Tag
+	template_name = 'blog/tag_posts.html'
+	context_object_name = 'posts'
+	ordering = ['-date_posted']
+	paginate_by = 5
+	tag_name = None
+	
+	def get_queryset(self):
+		tag = get_object_or_404(Tag, slug=self.kwargs.get('slug'))
+		self.tag_name = tag
+		return Post.objects.filter(tags__in=[tag]).order_by('-date_posted')
 
 class PostDetailView(DetailView):
 	model = Post
-
+	
 class PostCreateView(LoginRequiredMixin, CreateView):
 	model = Post
-	fields = ['title', 'content']
+	fields = ['title', 'slug', 'author', 'content', 'date_posted', 'status', 'tags']
 
 	def form_valid(self, form):
 		form.instance.author = self.request.user
@@ -75,7 +82,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 	model = Post
-	fields = ['title', 'content']
+	fields = ['title', 'slug', 'author', 'content', 'date_posted', 'status', 'tags']
 
 	def form_valid(self, form):
 		form.instance.author = self.request.user

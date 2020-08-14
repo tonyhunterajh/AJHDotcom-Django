@@ -1,4 +1,4 @@
-{% extends 'ajhsite/base.html' %}
+{% extends 'blog/base.html' %}
 {% load static %}
 {% block content%}
 
@@ -11,7 +11,7 @@
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-outline-danger" type="submit">Delete</button>
-                <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Cancel</a>
+                <a class="btn btn-outline-secondary" href="{{ post.get_absolute_url }}">Cancel</a>
             </div>
         </form>
     </div>

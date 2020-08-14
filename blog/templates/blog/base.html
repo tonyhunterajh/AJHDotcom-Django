@@ -1,0 +1,208 @@
+{% load static %}
+{% load blog_tags %}
+<!doctype html>
+<html lang="en">
+
+<!--*************************************************************************
+    Site Header.
+    ************************************************************************* -->
+    <header>
+
+      <!-- Responsive Site Settings -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+      <!-- AJHdotcom Site Title --> 
+      <title>AJHdotcom</title>
+  
+      <!-- AJHdotcom Specific Styles -->
+      <link rel="stylesheet" type="text/css" href="{% static 'ajhsite/styles/ajhdotcom.css'%}">
+
+      <!-- Bootstrap4 Styles  -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+      <!-- Bootstrap4-->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+  </header>
+
+<!--*************************************************************************
+    Site Navigation Section.
+    ************************************************************************* -->
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="{% url 'site-home' %}">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mr-auto">
+
+            <!-- Links -->
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'site-about' %}">About</a>
+            </li>
+        
+            <!-- Preacher Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Preacher</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'site-preacherBio'%}">Bio</a>
+                <a class="dropdown-item" href="{% url 'site-preacherBooks'%}">Books</a>
+              </div>
+            </li>
+
+            <!-- Professional Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Professional</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'site-professionalProfile'%}">Profile</a>
+              </div>
+            </li>
+
+            <!-- Pitmaster Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Pitmaster</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'site-pitmasterBio'%}">Background</a>
+              </div>
+            </li>
+
+            <!-- Blog -->
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'blog-home' %}">My Blog</a>
+            </li>
+
+          </ul>
+
+          <ul class="navbar-nav">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
+            </li>
+
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+              </li>
+
+            {% endif %}
+          </ul>
+      </div>
+
+    </nav>
+
+    <div class="d-flex flex-wrap pt-2 mr-2 ml-2">
+      <div class="mr-auto">
+        <a href="{% url 'site-home'%}"><img src="{% static 'ajhsite/images/ajhdotcom_logo_nobkg.png'%}" width="350" height="60" alt="Anthony J. Hunter"></a>
+      </div>
+      <div class="ml-auto"></div>
+        <span><script type="text/javascript" src="https://www.sitelevel.com/javabox?crid=4gy8nktj"></script></span>
+      </div>
+    </div>
+    <br/>
+
+<!--*************************************************************************
+    Main Content Section.
+    ************************************************************************* -->
+
+	<main role="main" class="container mt-4">
+      <div class="row">
+
+        <div class="col-md-8">
+
+          {% if messages %}
+            {% for message in messages %}
+
+              {% if message.level == 25 %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+              {% endif %}
+              
+              {% if message.level == 40 %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+              {% endif %}
+
+            {% endfor %}
+          {% endif %}
+
+          {% block content %}{% endblock content %}
+
+        </div>
+
+        <div class="col-md-4">
+          <div class="content-section">
+            <div id="ContactSection" class="content">
+
+              <div class="container mb-2">
+                <div class="content" align="center">
+                  <img src="{% static 'ajhsite/images/tonyhunter.jpeg'%}" class="image-wrapper float-middle pr-3 pb-3 w-50 rounded-circle">
+                </div>
+              </div>
+
+                <div class="container mb-4">
+                    <div class="content" align="center">
+                        <h5 class="border-bottom text-info">Contact/Social Media</h5>
+                    </div>
+                </div>
+
+                <div class="container mb-4">
+                    <div class="content" align="center">
+                    <a target="_blank" class="mr-2" href="https://twitter.com/tonyhunterajh" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_logo-twitter.svg'%}"></a>
+                    <a target="_blank" class="mr-2" href="https://www.linkedin.com/in/thunterajh/" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_logo-linkedin.svg'%}"></a>
+                    <a target="_blank" class="mr-2" href="https://www.facebook.com/anthony.hunter.3363" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_round-facebook.svg'%}"></a>
+                    <a target="_blank" class="mr-2" href="https://github.com/tonyhunterajh" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_round-github.svg'%}"></a>
+                    <a target="_blank" class="" href="https://join.slack.com/t/ajhdotcom/shared_invite/zt-gpgho6xs-opUFunGSWVGv3DhV0Zj6QA"><img src="{% static 'ajhsite/images/svg/social-1_logo-slack.svg'%}"></a>
+                    </div>
+                </div>
+
+                <div class="container mt-4">
+                  <div class="content" align="center">
+                      <small><p class="text-muted">There are {% total_posts %} posts on this blog.</p></small>
+                  </div>
+                </div>
+
+                <div class="container mt-4">
+                    <div class="content" align="left">
+                        <h5 class="border-bottom text-info">Recent Posts</h5>
+                        {% show_recent_posts %}
+                    </div>
+                </div>
+
+            </div>
+         </div>
+        </div>
+
+      </div>
+    </main>
+    
+<!--*************************************************************************
+    Page Footer Section.
+    ************************************************************************* -->
+    <div id="siteFooter" class="container pt-4">
+      
+    </div>
+
+<!--*************************************************************************
+    Page Copyright (c) Section.
+    ************************************************************************* -->
+    <div id="siteCopyright" class="border-top pt-2">
+      <p align="center"><font color="gray">Copyright &copy; 2020 Anthony J. Hunter</font></p>
+    </div>
+
+</html>

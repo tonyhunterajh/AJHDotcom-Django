@@ -1,2 +1,5 @@
 
 ajhdotcom/.env
+.vscode/launch.json
+db.sqlite3
+ajhdotcom/settings.py
