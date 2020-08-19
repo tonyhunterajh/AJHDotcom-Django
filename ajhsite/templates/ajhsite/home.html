@@ -4,7 +4,7 @@
 
 	<div class="jumbotron">
         <div class="container">
-          <h1 class="display-4">Welcome!</h1>
+		  <h1 class="display-4">Welcome!</h1>
           <p>
 			  This website is all about me!  Here you will learn something of the three things that pretty much sums up who I am
 			  and what it is I do.  You will find inspiration for your spirit and information for your mind along with some
@@ -22,8 +22,9 @@
 			<h2>Ministry</h2>
 			<p>
 				Serving God and people are the most important aspects of who I am.  I live to serve God and to see people
-				grow, develop and thrive in life.
+				grow, develop and thrive in life and reach their potential.
 			</p>
+			<img src="{% static 'ajhsite/images/ajhm_desk.JPG'%}" class="image-wrapper float-left pr-3 pb-3 w-75 rounded" alt="Notes" />
 			<p><a class="btn btn-secondary" href="{% url 'site-preacherBio'%}" role="button">More... &raquo;</a></p>
 			</div>
 			<div class="col-md-4">
@@ -32,6 +33,7 @@
 				I am a complete geek at heart and mind!  I love all things technology but especially writing code.  In fact, This
 				website is created from scratch by me!
 			</p>
+			<img src="{% static 'ajhsite/images/tech.jpg'%}" class="image-wrapper float-left pr-3 pb-3 w-75 rounded" alt="Code" />
 			<p><a class="btn btn-secondary" href="{% url 'site-professionalProfile'%}" role="button">More... &raquo;</a></p>
 			</div>
 			<div class="col-md-4">
@@ -40,11 +42,10 @@
 				Well, what can I say?  People need to eat and I love to cook for them.  My specialty is authentic, low and slow,
 				wood-smoked barbecue.  It's the best BBQ you never had!
 			</p>
+			<img src="{% static 'ajhsite/images/ribs.jpg'%}" class="image-wrapper float-left pr-3 pb-3 w-75 rounded" alt="BBQ" />
 			<p><a class="btn btn-secondary" href="{% url 'site-pitmasterBio'%}" role="button">More... &raquo;</a></p>
 			</div>
 		</div>
-
-		<hr>
 
 	</div> <!-- /container -->
 

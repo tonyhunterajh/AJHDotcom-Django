@@ -14,6 +14,7 @@ urlpatterns = [
     path('', PostListView.as_view(), name='blog-home'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
     path('tag/<slug:slug>/', TagPostListView.as_view(), name='tag-posts'),
+    path('<int:post_id>/share/', views.share_post, name='share-post'),
     path('post/<int:year>/<int:month>/<int:day>/<slug:slug>/detail/', PostDetailView.as_view(), name='post-detail'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),
     path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),

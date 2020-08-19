@@ -9,98 +9,169 @@
     <div class="container mt-4">
 
         <p>Tony has over 30 years of Information Technology experience in multiple disciplines, including system operations, networking, 
-            software engineering, web development, CRM, ETL and RPA (Robotic Process Automation).
+            software engineering, web development, Enterprise Collaboration, Cloud Solutions, CRM, ETL and RPA (Robotic Process Automation).
         </p>
 
-        <h4 class="border-bottom mt-2">Industry Experience</h4>
-        <div id="industryExperience" class="content">
-            <p>
-                <ul>
-                    <li>Not-For-Profit</li>
-                    <li>Supply Chain</li>
-                    <li>K-12 Education</li>
-                    <li>Insurance</li>
-                    <li>Healthcare</li>
-                    <li>Agriculture</li>
-                </ul>
-            </p>
-        </div>
-
-        <h4 class="border-bottom mt-2">Hardware Platforms</h4>
-        <div id="hardwarePlatforms" class="content">
-            <p>
-                <ul>
-                    <li>PC (Windows/Linux)</li>
-                    <li>Mac</li>
-                    <li>Mobile</li>
-                </ul>
-            </p>
-        </div>
-
-        <h4 class="border-bottom mt-2">Cloud Solutions/Technology</h4>
-        <div id="Cloud" class="content">
-            <p>
-                <ul>
-                    <li>Azure</li>
-                    <li>AWS</li>
-                    <li>Microsoft 365</li>
-               </ul>
-            </p>
-        </div>
-
-        <h4 class="border-bottom mt-2">Programming Languages</h4>
-        <div id="programmingLanguages" class="content">
-            <p>
-                <ul>
-                    <li>C#</li>
-                    <li>Javascript</li>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>PHP</li>
-                </ul>
-            </p>
-        </div>
-
-        <h4 class="border-bottom mt-2">Databases (RDBMS/Cloud)</h4>
-        <div id="databases" class="content">
-            <p>
-                <ul>
-                    <li>Snowflake</li>
-                    <li>SQL Server</li>
-                    <li>MySQL</li>
-                    <li>SQLite</li>
-                    <li>MS Acces</li>
-                </ul>
-            </p>
-        </div>
-
-        <h4 class="border-bottom mt-2">Professional Certifications/Training</h4>
-        <div id="certifications" class="content">
-            <p>
-                <ul>
-                    <li>Certification: MCP February 1995: “Microsoft Windows Networking</li>
-                    <li>Dale Carnegie Training April 1999: “Leadership Training For Managers - Course #M9902</li>
-                    <li>Snowflake Hands On Essentials - Web User Interface 2020</li>
-                    <li>UIPath RPA Starter May 4, 2020</li>
-                    <li>UIPath RPA Developer Foundation May 14, 2020</li>
-                    <li>Certification: Microsoft 365 Fundamentals (MS-900) June 22, 2020</li>
-                </ul>
-                <p class="w3-panel w3-light-blue"> Badges/Diplomas Acquired:</p>
-                <a target="" href="{% static 'ajhsite/images/MS365_MS900.png'%}"><img  src="{% static 'ajhsite/images/MS365_MS900.png'%}" alt="Microsoft Badge" width="100" height="100" /></a>
-                <a target="" href="{% static 'ajhsite/images/Essentials+Board_4x.png'%}"><img  src="{% static 'ajhsite/images/Essentials+Board_4x.png'%}" alt="Snowflake Badge" width="100" height="100" /></a>
-                <a target="" href="{% static 'ajhsite/images/RPAStarterDiploma.png'%}"><img  src="{% static 'ajhsite/images/RPAStarterDiploma.png'%}" alt="RPA Starter" width="150" height="100" /></a>
-                <a target="" href="{% static 'ajhsite/images/RPADevFoundDiploma.png'%}"><img  src="{% static 'ajhsite/images/RPADevFoundDiploma.png'%}" alt="RPA Developer" width="150" height="100" /></a>
-            </p>
-        </div>
-
-        <h4 class="border-bottom mt-2">Publications</h4>
-        <div id="publications" class="content">
-            <p>
-                <ul>
-                    <li>News/400 Magazine Article, February 1999, “A Closer Look: Domino for AS/400 Certification”</li>
-                </ul>              
-            </p>
-        </div>
+        <div class="accordion" id="professionalProfile">
+            <div class="card">
+              <div class="card-header bg-light" id="industryExperience">
+                <h5 class="mb-0">
+                  <button class="btn btn-link text-info" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Industry Experience
+                  </button>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="industryExperience" data-parent="#professionalProfile">
+                <div class="card-body">
+                    <p>
+                        <ul>
+                            <li>Not-For-Profit</li>
+                            <li>Supply Chain</li>
+                            <li>K-12 Education</li>
+                            <li>Insurance</li>
+                            <li>Healthcare</li>
+                            <li>Agriculture</li>
+                        </ul>
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header bg-light" id="hardwarePlatforms">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed text-info" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Hardware Platforms
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="hardwarePlatforms" data-parent="#professionalProfile">
+                <div class="card-body">
+                    <p>
+                        <ul>
+                            <li>PC (Windows/Linux)</li>
+                            <li>Mac</li>
+                            <li>Mobile</li>
+                        </ul>
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header bg-light" id="cloud">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed text-info" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Cloud Solutions/Technology
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="cloud" data-parent="#professionalProfile">
+                <div class="card-body">
+                    <p>
+                        <ul>
+                            <li>Azure</li>
+                            <li>AWS</li>
+                            <li>Microsoft 365</li>
+                       </ul>
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-light" id="programmingLanguages">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed text-info" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Programming Languages
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="programmingLanguages" data-parent="#professionalProfile">
+                  <div class="card-body">
+                    <p>
+                        <ul>
+                            <li>C#</li>
+                            <li>HTML/CSS</li>
+                            <li>Javascript</li>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>PHP</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header bg-light" id="databases">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed text-info" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      Databases
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="databases" data-parent="#professionalProfile">
+                  <div class="card-body">
+                    <p>
+                        <ul>
+                            <li>Snowflake</li>
+                            <li>SQL Server</li>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>SQLite</li>
+                            <li>MS Acces</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header bg-light" id="certifications">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed text-info" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      Certifications/Training
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="certifications" data-parent="#professionalProfile">
+                  <div class="card-body">
+                    <p>
+                        <ul>
+                            <li>Certification: MCP February 1995: “Microsoft Windows Networking</li>
+                            <li>Dale Carnegie Training April 1999: “Leadership Training For Managers - Course #M9902</li>
+                            <li>Snowflake Hands On Essentials - Web User Interface 2020</li>
+                            <li>UIPath RPA Starter May 4, 2020</li>
+                            <li>UIPath RPA Developer Foundation May 14, 2020</li>
+                            <li>Certification: Microsoft 365 Fundamentals (MS-900) June 22, 2020</li>
+                            <li>Certification: Microsoft Azure Fundamentals (AZ-900) August 17, 2020</li>
+                        </ul>
+                        <p class="w3-panel w3-light-blue"> Badges/Diplomas Acquired:</p>
+                        <a target="" href="{% static 'ajhsite/images/MS365_MS900.png'%}"><img  src="{% static 'ajhsite/images/MS365_MS900.png'%}" alt="Microsoft Badge" width="100" height="100" /></a>
+                        <a target="" href="{% static 'ajhsite/images/Azure_AZ900.png'%}"><img  src="{% static 'ajhsite/images/Azure_AZ900.png'%}" alt="Microsoft Badge" width="100" height="100" /></a>
+                        <a target="" href="{% static 'ajhsite/images/Essentials+Board_4x.png'%}"><img  src="{% static 'ajhsite/images/Essentials+Board_4x.png'%}" alt="Snowflake Badge" width="100" height="100" /></a>
+                        <a target="" href="{% static 'ajhsite/images/RPAStarterDiploma.png'%}"><img  src="{% static 'ajhsite/images/RPAStarterDiploma.png'%}" alt="RPA Starter" width="150" height="100" /></a>
+                        <a target="" href="{% static 'ajhsite/images/RPADevFoundDiploma.png'%}"><img  src="{% static 'ajhsite/images/RPADevFoundDiploma.png'%}" alt="RPA Developer" width="150" height="100" /></a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header bg-light" id="publications">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed text-info" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      Publications
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="publications" data-parent="#professionalProfile">
+                  <div class="card-body">
+                    <p>
+                        <ul>
+                            <li>News/400 Magazine Article, February 1999, “A Closer Look: Domino for AS/400 Certification”</li>
+                        </ul>              
+                    </p>
+                  </div>
+                </div>
+              </div>
+          </div>
 
     </div>
 

@@ -31,7 +31,7 @@
     Site Navigation Section.
     ************************************************************************* -->
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark container">
 
       <!-- Brand -->
       <a class="navbar-brand" href="{% url 'site-home' %}">Home</a>
@@ -103,14 +103,17 @@
 
     </nav>
 
-    <div class="d-flex flex-wrap pt-2 mr-2 ml-2">
-      <div class="mr-auto">
-        <a href="{% url 'site-home'%}"><img src="{% static 'ajhsite/images/ajhdotcom_logo_nobkg.png'%}" width="350" height="60" alt="Anthony J. Hunter"></a>
-      </div>
-      <div class="ml-auto"></div>
-        <span><script type="text/javascript" src="https://www.sitelevel.com/javabox?crid=4gy8nktj"></script></span>
+    <div class="container">
+      <div class="d-flex flex-wrap pt-2 mr-2 ml-2">
+        <div class="mr-auto">
+          <a href="{% url 'site-home'%}"><img src="{% static 'ajhsite/images/ajhdotcom_logo_nobkg.png'%}" width="350" height="60" alt="Anthony J. Hunter"></a>
+        </div>
+        <div class="ml-auto"></div>
+          <span><script type="text/javascript" src="https://www.sitelevel.com/javabox?crid=4gy8nktj"></script></span>
+        </div>
       </div>
     </div>
+    
     <br/>
 
 <!--*************************************************************************
@@ -118,9 +121,6 @@
     ************************************************************************* -->
 
 		<main role="main" class="container mt-4">
-      <div class="row">
-
-        <div class="col-md-8">
 
           {% if messages %}
             {% for message in messages %}
@@ -141,45 +141,31 @@
           {% endif %}
 
           {% block content %}{% endblock content %}
-
-        </div>
-        <div class="col-md-4">
-          <div class="content-section">
-            <div id="ContactSection" class="content">
-
-              <div class="container mb-2">
-                <div class="content" align="center">
-                  <img src="{% static 'ajhsite/images/tonyhunter.jpeg'%}" class="image-wrapper float-middle pr-3 pb-3 w-50 rounded-circle">
-                </div>
-            </div>
-
-              <div class="container mb-4">
-                  <div class="content" align="center">
-                    <h5 class="border-bottom text-info">Contact/Social Media</h5>
-                  </div>
-              </div>
-
-              <div class="container mb-4">
-                <div class="content" align="center">
-                  <a target="_blank" class="mr-2" href="https://twitter.com/tonyhunterajh" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_logo-twitter.svg'%}"></a>
-                  <a target="_blank" class="mr-2" href="https://www.linkedin.com/in/thunterajh/" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_logo-linkedin.svg'%}"></a>
-                  <a target="_blank" class="mr-2" href="https://www.facebook.com/anthony.hunter.3363" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_round-facebook.svg'%}"></a>
-                  <a target="_blank" class="mr-2" href="https://github.com/tonyhunterajh" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_round-github.svg'%}"></a>
-                  <a target="_blank" class="" href="https://join.slack.com/t/ajhdotcom/shared_invite/zt-gpgho6xs-opUFunGSWVGv3DhV0Zj6QA"><img src="{% static 'ajhsite/images/svg/social-1_logo-slack.svg'%}"></a>
-                </div>
-              </div>
-
-            </div>
-         </div>
-        </div>
-
-      </div>
+        
     </main>
     
 <!--*************************************************************************
     Page Footer Section.
     ************************************************************************* -->
-    <div id="siteFooter" class="container pt-4">
+    <div id="siteFooter" class="container">
+ 
+        <div class="content">
+          <div id="ContactSection" class="content">
+
+            <hr>
+
+            <div class="container mb-4 mt-4">
+              <div class="content" align="center">
+                <a target="_blank" class="mr-2" href="https://twitter.com/tonyhunterajh" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_logo-twitter.svg'%}"></a>
+                <a target="_blank" class="mr-2" href="https://www.linkedin.com/in/thunterajh/" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_logo-linkedin.svg'%}"></a>
+                <a target="_blank" class="mr-2" href="https://www.facebook.com/anthony.hunter.3363" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_round-facebook.svg'%}"></a>
+                <a target="_blank" class="mr-2" href="https://github.com/tonyhunterajh" target="_blank"><img src="{% static 'ajhsite/images/svg/social-1_round-github.svg'%}"></a>
+                <a target="_blank" class="" href="https://join.slack.com/t/ajhdotcom/shared_invite/zt-gpgho6xs-opUFunGSWVGv3DhV0Zj6QA"><img src="{% static 'ajhsite/images/svg/social-1_logo-slack.svg'%}"></a>
+              </div>
+            </div>
+
+          </div>
+       </div>
       
     </div>
 

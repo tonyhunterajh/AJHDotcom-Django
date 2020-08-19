@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/base_post.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content%}
@@ -8,6 +8,7 @@
             {% csrf_token %}
             <fieldset class="form-group">
                 <legend class="border-bottom pt-2">Blog Post</legend>
+                {{ form.media }}
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">

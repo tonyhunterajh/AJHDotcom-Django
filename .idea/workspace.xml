@@ -1,20 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:AJHDotcom-Django" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ajhdotcom" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d74f628-3d1b-43e5-b163-f340b0319b39" name="Default Changelist" comment="" />
+    <list default="true" id="4d74f628-3d1b-43e5-b163-f340b0319b39" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/migrations/0005_auto_20200814_1627.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/base_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/share_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ajhdotcom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ajhdotcom.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajhdotcom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ajhdotcom/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/tag_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/tag_posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/user_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/user_posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1fMdW7AuYEl9tBOOyLgfCmzEeK8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="ajhdotcom" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -26,5 +101,70 @@
       <updated>1596031925667</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="316" y="90" width="724" height="618" key="#Inspections" timestamp="1597434130200">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state x="316" y="90" width="724" height="618" key="#Inspections/0.23.1366.745@0.23.1366.745" timestamp="1597434130200" />
+    <state x="145" y="60" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597457457744">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state x="145" y="60" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1366.745@0.23.1366.745" timestamp="1597457457744" />
+    <state x="519" y="214" width="318" height="377" key="FileChooserDialogImpl" timestamp="1597457432551">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state x="519" y="214" width="318" height="377" key="FileChooserDialogImpl/0.23.1366.745@0.23.1366.745" timestamp="1597457432551" />
+    <state width="1348" height="231" key="GridCell.Tab.0.bottom" timestamp="1597434968044">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1348" height="231" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1597434968044" />
+    <state width="1348" height="231" key="GridCell.Tab.0.center" timestamp="1597434968042">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1348" height="231" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1597434968042" />
+    <state width="1348" height="231" key="GridCell.Tab.0.left" timestamp="1597434968041">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1348" height="231" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1597434968041" />
+    <state width="1348" height="231" key="GridCell.Tab.0.right" timestamp="1597434968043">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1348" height="231" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1597434968043" />
+    <state width="1348" height="231" key="GridCell.Tab.1.bottom" timestamp="1597434968046">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1348" height="231" key="GridCell.Tab.1.bottom/0.23.1366.745@0.23.1366.745" timestamp="1597434968046" />
+    <state width="1348" height="231" key="GridCell.Tab.1.center" timestamp="1597434968045">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1348" height="231" key="GridCell.Tab.1.center/0.23.1366.745@0.23.1366.745" timestamp="1597434968045" />
+    <state width="1348" height="231" key="GridCell.Tab.1.left" timestamp="1597434968045">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1348" height="231" key="GridCell.Tab.1.left/0.23.1366.745@0.23.1366.745" timestamp="1597434968045" />
+    <state width="1348" height="231" key="GridCell.Tab.1.right" timestamp="1597434968045">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1348" height="231" key="GridCell.Tab.1.right/0.23.1366.745@0.23.1366.745" timestamp="1597434968045" />
+    <state x="546" y="124" width="758" height="562" key="SettingsEditor" timestamp="1597457750532">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state x="546" y="124" width="758" height="562" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1597457750532" />
   </component>
 </project>
