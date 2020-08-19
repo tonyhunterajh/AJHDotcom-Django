@@ -105,12 +105,21 @@
 
     <div class="container">
       <div class="d-flex flex-wrap pt-2 mr-2 ml-2">
+
         <div class="mr-auto">
           <a href="{% url 'site-home'%}"><img src="{% static 'ajhsite/images/ajhdotcom_logo_nobkg.png'%}" width="350" height="60" alt="Anthony J. Hunter"></a>
         </div>
-        <div class="ml-auto"></div>
-          <span><script type="text/javascript" src="https://www.sitelevel.com/javabox?crid=4gy8nktj"></script></span>
+        <div class="ml-auto">
+
+          <!-- Start of Site Search 360 Search Box -->
+          <section role="search" data-ss360="true">
+            <input type="search" id="searchBox">
+            <button id="searchButton"></button>
+          </section>
+          <!-- End of Site Search 360 Search Box -->
+          
         </div>
+
       </div>
     </div>
     
