@@ -9,6 +9,12 @@
             <div class="media-body">
                 <h5><a class="text-info" href="{{ post.get_absolute_url }}"> {{ post.title }} </a></h5>
                 <p class="mt-3"> 
+
+                    <!-- Only show the image if it is NOT the default imaage. -->
+                    {% ifnotequal post.post_image 'default.png' %}
+                        <img src="{{ post.post_image.url }}" class="image-wrapper float-left pr-3 pb-3 w-25 rounded" alt="{{ post.title }}" />
+                    {% endifnotequal %}
+
                     {{ post.content|safe|truncatewords:100 }} 
                     {% if post.content|length > 100 %}
                         <small class="text-muted"><a class="article-title" href="{{ post.get_absolute_url }}"><i>(Continue reading...)</i></a></small>

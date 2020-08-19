@@ -21,6 +21,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     status = models.CharField(max_length=10, choices=POST_STATUSES, default='draft')
     tags = TaggableManager()
+    post_image = models.ImageField(upload_to='blog_images/', default='default.png')
 
     class Meta:
         ordering = ('-date_posted',)
